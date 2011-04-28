@@ -1,0 +1,32 @@
+# Autor: Liber Dovat
+#
+# Makefile para compilar un documento latex
+#
+# Para utilizar solo hay que llenar el campo NAME de la siguiente
+# manera NAME=nombre_del_archivo sin agregar la extension
+#
+
+# El nombre del archivo sin la extension
+NAME=prog4
+
+# Compiladores y programas
+PDFLATEX = pdflatex
+
+# Otras opciones
+OPCIONESLATEX =
+ARCHIVOS = atributo.cc dynamic_cast.cc interface.cc iterador.cc singleton.cc subclase.cc
+
+all: $(NAME).pdf
+
+$(NAME).pdf: $(NAME).tex $(ARCHIVOS) colorful.sty makefile
+	$(PDFLATEX) $(OPCIONESLATEX) $(NAME).tex
+	$(PDFLATEX) $(OPCIONESLATEX) $(NAME).tex
+
+view: all
+	okular $(NAME).pdf &
+
+clean:
+	rm -f $(NAME).out $(NAME).aux $(NAME).toc $(NAME).log $(NAME).nav $(NAME).snm
+	touch $(NAME).tex
+
+again: clean all

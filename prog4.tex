@@ -1,0 +1,609 @@
+\documentclass[a4paper,12pt,oneside]{report}
+
+%----------------------------------------------
+% Preambulo
+
+\usepackage{colorful}
+
+\begin{document}
+
+  %----------------------------------------------
+  % Titulo
+
+  \title{
+    \begin{flushright}
+      \Huge  Programaci\'on 4\\
+      \LARGE \ColDarkBlue{Un resumen de conceptos}
+    \end{flushright}
+  } % \title
+
+  \author{\vspace{5cm}
+    \\
+    \normalsize
+    \begin{tabular}{c}
+      Compilado por Liber Dovat el \today\\
+      Con el aporte de Gonzalo Cedr\'es y Pablo Yaniero\\
+      \\
+      Versi\'on 1.7\\
+      \\
+      \href{http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es_CL}{Licenciado bajo CC-by-nc-sa 3.0}
+    \end{tabular}
+  } % \author
+
+  \date{}
+  \maketitle
+
+  \newpage
+
+  %----------------------------------------------
+  %Indice
+
+  \pagenumbering{Roman}
+  \tableofcontents
+  \thispagestyle{plain}
+
+  \newpage
+
+  %----------------------------------------------
+  % Contenido
+
+  \pagenumbering{arabic}
+
+  %============================================== Capitulo 1
+
+  \chapter{An\'alisis}
+  \thispagestyle{contenido} % no sacar
+  \pagestyle{contenido}     % no sacar
+
+    \section{Elementos}
+        \paragraph{Orientaci\'on a objetos}
+          Puede ser entendida como una forma de pensar basada en abstracciones de conceptos existentes en el mundo real.
+
+        \paragraph{An\'alisis orientado a objetos}
+          Consiste en considerar el dominio de la aplicaci\'on y su soluci\'on l\'ogica en t\'erminos de objetos (cosas, conceptos, entidades).
+
+          \subparagraph{Objetivo-1}
+            Busca de modelar el dominio del problema para comprender mejor el contexto del problema y para obtener una primera \emph{aproximaci\'on} a la estructura de la soluci\'on.
+
+          \subparagraph{Objetivo-2}
+            \begin{itemize}
+              \item Modelar el dominio el problema\\
+                    Para comprender mejor el contexto del problema.\\
+                    Para obtener una primera \emph{aproximaci\'on} a la estructura de la soluci\'on.
+              \item Especificar el comportamiento del sistema\\
+                    Para contar con una descripci\'on mas precisa de que es lo que se espera del sistema.
+            \end{itemize}
+
+        \paragraph{Actividades en el an\'alisis}
+          \begin{itemize}
+            \item Modelado de dominio\\
+                  Consiste en encontrar y describir los objetos (o conceptos) en el dominio de la aplicaci\'on.
+            \item Especificaci\'on del comportamiento del sistema\\
+                  Consiste en entender a cada caso de uso en t\'erminos de intercambios de mensajes entre los actores y el sistema, y en especificar el comportamiento de cada uno de esos mensajes (Pero sin decir como funcionan).
+          \end{itemize}
+
+      %---------------------------------------- seccion 0
+
+    \section{Conceptos b\'asicos}
+
+        \paragraph{Concepto}
+          Es una idea, cosa u objeto.
+
+        \paragraph{Clase}
+          Es un descriptor de objetos que comparten los mismos atributos,
+          operaciones, m\'etodos, relaciones y comportamiento.
+
+        \paragraph{Objeto}
+          Es una entidad discreta con limites e identidad bien definidos.\\
+          Encapsula estado y comportamiento.\\
+          Es una instancia de una clase.
+
+        \paragraph{Identidad}
+          Es una propiedad inherente de los objetos de ser distinguibles de
+          todos los dem\'as.\\
+          Dos objetos son distintos aunque tengan exactamente los mismos
+          valores en sus propiedades.
+
+        \paragraph{Atributo}
+          Es una descripci\'on de un comportamiento de un tipo especificado
+          dentro de una clase.\\
+          Puede ser:
+            \begin{description}
+              \item De instancia:\\
+                      cada objeto de esa clase mantiene un valor de ese tipo en
+                      forma independiente.
+              \item De clase:\\
+                      Todos los objetos de esa clase comparten un mismo valor de
+                      ese tipo.
+            \end{description}
+
+        \paragraph{Operaci\'on}
+          Es una \emph{especificaci\'on} de una transformaci\'on o consulta
+          que un objeto puede ser llamado a ejecutar.\\
+          Tiene asociada un nombre, una lista de par\'ametros y un tipo de
+          retorno.
+
+        \paragraph{M\'etodo}
+          Es la \emph{implementaci\'on} de una operaci\'on para una
+          determinada clase.\\
+          Especifica el algoritmo o procedimiento que genera el resultado o
+          efecto de la operaci\'on.
+
+        \paragraph{Polimorfismo}
+          Es la capacidad de asociar diferentes m\'etodos a la misma operaci\'on.
+
+        \paragraph{Interfaz}
+          Es un conjunto de operaciones al que se le aplica un nombre.
+
+        \paragraph{Datatype}
+          Es un descriptor de un conjunto de valores que \emph{carecen de identidad}.
+
+        \paragraph{Datavalue}
+          Es un valor \'unico que carece de identidad.\\
+          Es la instancia de un Datatype.\\
+          T\'ipicamente son usados como valores de atributos.
+
+        \paragraph{Referencia}
+          Es un valor en tiempo de ejecuci\'on que es \emph{void} o \emph{attached}.
+          \begin{itemize}
+            \item Si es attached la referencia identifica a un \'unico objeto.
+            \item Si es void la referencia no identifica a ning\'un objeto.
+          \end{itemize}
+
+        \paragraph{Tipo est\'atico y din\'amico}
+          El tipo est\'atico de un objeto es el tipo del cual fue declarada la referencia
+          adjunta a \'el; se conoce en tiempo de compilaci\'on.\\
+          El tipo din\'amico es el tipo del cual es instancia directa.\\
+          En ciertas situaciones ambos tipos coinciden por lo que pierde sentido realizar tal
+          distinci\'on.
+
+        \paragraph{Asociaci\'on}
+          Describe una relaci\'on sem\'antica entre clasificadores.\\
+          es una relaci\'on entre conceptos que indica alguna conexi\'on
+          interesante o significativa entre ellos.
+
+        \paragraph{Generalizaci\'on}
+          Es una relaci\'on taxon\'omica entre un elemento m\'as general y un elemento m\'as
+          espec\'ifico.\\
+          El elemento m\'as espec\'ifico es consistente con el m\'as general y
+          puede tener informaci\'on adicional.
+
+        \paragraph{Realizaci\'on}
+          Es una relaci\'on entre una especificaci\'on y su implementaci\'on.\\
+          Por ejemplo, entre una interface y una clase.
+
+        \paragraph{Tipo asociativo}
+          Es un elemento que es tanto clase como asociaci\'on.\\
+          Agrega propiedades a las asociaciones.
+
+        \paragraph{Roles}
+          Especifican el papel que juegan las clases en una asociaci\'on.
+          \subparagraph{Cuando utilizar el rol}
+            Se utiliza para eliminar la ambig\"uedad cuando existen mas de
+            dos asociaciones entre dos clases.
+
+        \paragraph{Agregaci\'on}
+          Significa que un elemento es parte de otro.\\
+          Existen dos variantes:
+          \begin{itemize}
+            \item Compartida:\\
+                    Es una agregaci\'on en la que las partes no son exclusivas del
+                    compuesto.\\
+                    Las partes pueden estar incluidas en otros compuestos.
+            \item Compuesta:\\
+                    Es una agregaci\'on en la que las partes son exclusivas del
+                    compuesto.\\
+                    Generalmente una acci\'on sobre el compuesto se propaga a las
+                    partes (t\'ipicamente en la destrucci\'on).
+          \end{itemize}
+
+        \paragraph{Subsumption}
+          Es una propiedad que deben cumplir todos los objetos, tambi\'en conocida
+          como \emph{intercambiabilidad}.\\
+          Un objeto de clase base puede ser sustituido por un objeto de clase derivada
+          ( directa o indirecta ).\\
+          Por lo tanto: $b:B \wedge B<:A \Longrightarrow b:A$
+
+        \paragraph{Acceso a propiedades}
+          La propiedades de una clase tienen aplicadas calificadores de acceso:
+          \begin{itemize}
+            \item Public:\\
+                    Puede se accedida desde cualquier punto desde el cual se tenga
+                    visibilidad sobre el objeto.
+            \item Private:\\
+                    Puede ser accedida solamente desde los m\'etodos de la propia clase.
+          \end{itemize}
+          Por defecto, los atributos deben ser privados y las operaciones p\'ublicas.
+
+        \paragraph{Descriptores}
+          \begin{description}
+            \item Full descriptors:\\
+                    Es la descripci\'on completa que es necesaria para describir a un
+                    objeto.\\
+                    Contiene la descripci\'on de todos los atributos, operaciones y
+                    asociaciones que el objeto contiene.
+            \item Segment descriptor:\\
+                    Son los elementos que efectivamente se declaran en un modelo o
+                    en el c\'odigo (por ejemplo, clases) y contienen las propiedades
+                    heredables que son: Los atributos, las operaciones, los m\'etodos
+                    y la participaci\'on en asociaciones.
+          \end{description}
+
+        \paragraph{Herencia}
+          Es el mecanismo por el cual se permite compartir propiedades entre
+          una clase y sus descendientes.
+
+        \paragraph{Clase abstracta}
+          Ning\'un objeto puede ser creado directamente a partir de ellas.\\
+          No son instanciables.\\
+          Existen para que otras hereden las propiedades declaradas por ellas
+
+        \paragraph{Operaci\'on abstracta}
+          Es una operaci\'on en una clase sin m\'etodo.
+
+        \paragraph{Modelo}
+          Es una abstracci\'on de un sistema desde un punto de vista determinado:
+          Funcionalidad, estructura, l\'ogica, estructura f\'isica, etc.
+
+        \paragraph{Relaci\'on entre caso de uso, escenario y DSS}
+          Para un caso de uso pueden existir varios escenarios (t\'ipicos y
+          alternativos).\\
+          Cada escenario de caso de uso se puede representar con un DSS.
+
+        \paragraph{Relaci\'on entre caso de uso y colaboraci\'on}
+          Una colaboraci\'on realiza uno o m\'as casos de uso.
+
+    %---------------------------------------- seccion 1
+
+    \section{Modelo de dominio}
+        \paragraph{Modelos de las actividades}
+          Durante el modelado de dominio, se construye el modelo del dominio, mientras
+          que en la especificaci\'on del comportamiento del sistema se completa el
+          modelo de casos de uso.
+
+        \paragraph{Invariante}
+          Es un predicado que expresa una condici\'on sobre los elementos del
+          modelo de dominio y que siempre debe ser verdadero.
+          Invariantes habituales:
+          \begin{itemize}
+            \item Unicidad de atributos (identificaci\'on de instancias):\\
+                    Un atributo tiene un valor \'unico dentro del universo de instancias
+                    de un mismo tipo (una instancia es identificada por ese valor).
+            \item Dominio de atributos:\\
+                    El valor de un atributo pertenece a cierto dominio.
+            \item Integridad circular:\\
+                    no puede existir circularidad en la navegaci\'on.
+            \item Atributos calculados:\\
+                    El valor de un atributo es calculado a partir de la informaci\'on
+                    contenida en el dominio.
+            \item Reglas de negocio:\\
+                    Invariante que restringe el dominio del problema.
+          \end{itemize}
+
+    %---------------------------------------- seccion 2
+
+    \section{OCL}
+
+        \paragraph{Colecci\'on de objetos}
+          Ser\'an tratados como meros contenedores de objetos.\\
+          Proveer\'an solamente operaciones que permitan administrar los objetos
+          contenidos.\\
+          En general, las interfaces de diccionario (add, remove, find, member, etc.)
+          e iterador (next, etc.) son suficientes.
+
+        \paragraph{Subtipos}
+          Se distinguen tres subtipos de collection: Set, Bag y Sequence.\\
+          Se corresponden con los tipos abstractos conjunto, bolsa y secuencia
+          respectivamente.\\
+          Un valor de set es una colecci\'on de elementos donde ellos no se repiten
+          y no existe un orden entre ellos.\\
+          Un valor de bag es una colecci\'on de elementos donde ellos se pueden repetir
+          pero no existe un orden entre ellos.\\
+          Un valor de sequence es una colecci\'on de elementos donde ellos se pueden
+          repetir y existe un orden entre ellos.
+
+        \paragraph{Ejemplo 1}
+          \texttt{\\
+             context Etapa inv:\\
+             self.Pareja->forAll(p|p.concurso = self.concurso)
+          }
+
+        \paragraph{Ejemplo 2}
+          \texttt{\\
+             context Famoso inv:\\
+             self.Pareja->forAll(s1,s2| s1 <> s2 impies s1.concurso <> s2.concurso)
+          }
+
+        \paragraph{Ejemplo 3}
+          \texttt{\\
+             context Aplicacion inv:\\
+             Aplicacion.allInstances()->IsUnique(id)
+          }
+
+        \paragraph{Ejemplo 4}
+          \texttt{\\
+            context Empleado inv:\\
+            self.trabaja.horas->sum() <= 10
+          }
+
+        \paragraph{Ejemplo 5}
+          \texttt{\\
+            context Vendedor inv:\\
+            self.empresa.producto->includes(self.producto)
+          }
+
+    %---------------------------------------- seccion 3
+
+    \section{Casos de uso}
+
+      \subsection{Descripci\'on}
+        Narra la historia completa (junto a todas sus variantes) de un
+        conjunto de actores mientras usan el sistema.
+
+      \subsection{Diagrama de secuencia del sistema}
+        Es un artefacto incluido en el modelo de casos de uso, que define e ilustra
+        la interacci\'on entre los actores y el sistema en uno o varios escenarios de
+        un caso de uso.\\
+        Definen la conversaci\'on entre los actores y el sistema, enfoc\'andose
+        en los mensajes que el sistema recibe.
+
+        \subsubsection{Elementos del DSS}
+          Incluye una instancia representando al sistema, una instancia por cada actor
+          que participe y los mensajes enviados entre ellos para el escenario del caso de
+          uso que corresponda.
+          \begin{itemize}
+            \item Incluir una instancia que represente al sistema como una unidad.
+            \item Identificar cada actor que participe en el escenario considerado e
+                  incluir una instancia para cada uno.
+            \item De la descripci\'on del caso de uso, identificar aquellos eventos que
+                  los actores generen y sean de inter\'es para el sistema e incluir cada uno
+                  de ellos como un mensaje.
+            \item Opcionalmente, incluir junto a cada mensaje una descripci\'on.
+          \end{itemize}
+
+      \subsection{Contratos de software}
+        Especifican declarativamente mediante pre y post condiciones el comportamiento o
+        efecto de una operaci\'on.\\
+        Existe un contrato de software por cada operaci\'on del DSS.\\
+        El Consumidor se compromete a satisfacer la precondici\'on al invocar la operaci\'on.\\
+        El Proveedor se compromete a satisfacer la postcondici\'on al finalizar la operaci\'on
+        solamente cuando la precondici\'on fue satisfecha al momento de la invocaci\'on.
+
+        \paragraph{Precondici\'on}
+          Es a lo que debe acceder el consumidor para obtener el resultado deseado.\\
+          Es lo que debe exigir el proveedor para llegar al resultado.\\
+          Especifican los valores de los par\'ametros de la operaci\'on y el estado
+          del sistema antes de ejecutar la operaci\'on, en t\'erminos de:
+            \begin{itemize}
+              \item Que un objeto existe.
+              \item Que un objeto no existe.
+              \item Que un link existe.
+              \item Que un link no existe.
+              \item Propiedades sobre valores de atributos de objetos.
+            \end{itemize}
+
+        \paragraph{Postcondici\'on}
+          Es a lo que acceder\'a el consumidor.\\
+          Es a lo que se compromete el proveedor.\\
+          Especifican el valor de retorno de la operaci\'on y el estado del sistema luego
+          de ejecutar la operaci\'on, en t\'erminos de:
+            \begin{itemize}
+              \item Que un objeto existe.
+              \item Que un objeto no existe.
+              \item Que un link existe.
+              \item Que un link no existe.
+              \item Especificar el valor de retorno.
+            \end{itemize}
+
+        \paragraph{Memoria del sistema}
+          Son los datos que el sistema debe guardar temporalmente mientras se est\'e
+          ejecutando un caso de uso.\\
+          Representa el estado de la conversaci\'on entre usuario y sistema.
+
+  %============================================== Capitulo 2
+
+  \chapter{Dise\~no}
+  \thispagestyle{contenido} % no sacar
+  \pagestyle{contenido}     % no sacar
+
+    \section{Elementos}
+        \paragraph{Dise\~no orientado a objetos}
+          Consiste en definir objetos l\'ogicos (de software) y la forma de
+          comunicaci\'on entre ellos para una posterior programaci\'on.
+
+        \paragraph{Arquitectura l\'ogica}
+          Conjunto de componentes l\'ogicos relacionados entre si, con
+          responsabilidades espec\'ificas.
+
+    %---------------------------------------- seccion 1
+
+    \section{Modelo de dise\~no}
+      \subsection{Descripci\'on}
+        Es una abstracci\'on de la soluci\'on l\'ogica al problema.
+
+        \paragraph{Controladores}
+          Es una clase que implementa las operaciones del sistema.\\
+          Se destacan tres tipos de controladores:
+          \begin{itemize}
+            \item Fachada\\
+                    Contiene todas las operaciones del sistema.
+            \item Caso de uso\\
+                    Contiene todas las operaciones de un caso de uso.
+            \item Mini fachada\\
+                    Contiene operaciones de varios casos de uso relacionados.
+          \end{itemize}
+
+        \paragraph{Criterios GRASP}
+          Son criterios que ayudan a resolver el problema de asignar
+          responsabilidades.\\
+          Sugieren a quien asignar responsabilidades:
+          \begin{description}
+            \item Expert:\\
+                    Responsabilizar a quien tenga la informaci\'on necesaria.
+            \item Creator:\\
+                    A quien responsabilizar de la creaci\'on de un objeto.
+            \item Bajo acoplamiento:\\
+                    Evitar que un objeto interact\'ue con demasiados objetos.
+            \item Alta cohesi\'on:\\
+                    Evitar que un objeto haga demasiado trabajo.
+            \item No hables con extra\~nos:\\
+                    Asegurarse que un objeto realmente delega trabajo.
+            \item Controller:\\
+                    A quien responsabilizar de ser el controlador.
+          \end{description}
+
+        \paragraph{Clases fuertes}
+
+        \paragraph{Clases d\'ebiles}
+          Son clases de menor importancia a cuyas instancias se accede a
+          trav\'es de alguna instancia de clase fuerte.
+
+        \paragraph{Manejador}
+          Es una clase singleton que contiene el universo de instancias de cierta
+          clase y operaciones para la manipulaci\'on de ese universo.\\
+          \\
+          Las operaciones pueden ser CRUD (create, retrieve, update y delete)
+          y operaciones mas complejas que involucren \emph{solamente} las
+          instancias fuertes del manejador.\\
+          \\
+          Permiten que los controladores no dependan entre si para acceder a instancias
+          fuertes ni que deban compartir colecciones de esas instancias.
+
+        \paragraph{Interfaces del sistema}
+          Buscan quebrar las dependencias entre los elementos de la capa de
+          presentaci\'on que invocan operaciones del sistema y los controladores
+          de la capa l\'ogica que las implementan.\\
+          Contienen las operaciones del sistema que son implementadas por los controladores.
+
+        \paragraph{F\'abrica}
+          Es un objeto que tiene la responsabilidad de crear instancias que realicen una
+          interfaz determinada.
+
+        \paragraph{C\'omo dise\~nar una colaboraci\'on}
+          \begin{itemize}
+            \item Definir la estructura y luego generar las diferentes
+                  interacciones respetando la estructura.
+            \item Definir las interacciones (seg\'un GRAPS) y luego definir la
+                  estructura necesaria para que ocurran las interacciones.
+          \end{itemize}
+
+        \paragraph{Visibilidad}
+          Es la capacidad de un objeto de tener referencia a otro.\\
+          Existen cuatro formas b\'asicas de que un objeto A tenga visibilidad sobre otro B:
+          \begin{itemize}
+            \item Por atributo:\\
+                    B es un pseudo atributo de A.
+            \item Por par\'ametro:\\
+                    B es un par\'ametro de un m\'etodo de A.
+            \item Local:\\
+                    B es declarado localmente en un m\'etodo de A.
+            \item Global:\\
+                    B es visible en forma global.
+          \end{itemize}
+
+    %---------------------------------------- seccion 2
+
+    \section{Diagrama de comunicaci\'on}
+        \paragraph{Descripci\'on}
+          Son artefactos mediante los cuales se expresar\'an las
+          interacciones.
+
+    %---------------------------------------- seccion 3
+
+    \section{Patrones de dise\~no}
+      \subsection{Descripci\'on}
+        Explica un dise\~no general que se aplica a un problema de dise\~no a
+        objetos.
+
+        \paragraph{Strategy}
+          Busca definir una familia de algoritmos, encapsularlos y hacerlos
+          intercambiables.\\
+          Esto  permite que el algoritmo var\'ie dependiendo del cliente que lo utiliza.
+
+        \paragraph{Composite}
+          Componer objetos en estructuras arborescentes para representar jerarqu\'ia de
+          objetos compuestos y tratar uniformemente los mismos.
+
+        \paragraph{Singleton}
+          Asegurar que una clase tenga una sola instancia y proveer un acceso global a ella.
+
+        \paragraph{State}
+          Permite que un objeto var\'ie su comportamiento cuando su estado interno
+          cambie.\\
+          El objeto parecer\'a haber cambiado de clase.
+
+        \paragraph{Proxy}
+        \paragraph{Template method}
+        \paragraph{Observer}
+        \paragraph{Adapter}
+
+  %============================================== Capitulo 3
+
+  \chapter{Implementaci\'on}
+  \thispagestyle{contenido} % no sacar
+  \pagestyle{contenido}     % no sacar
+
+    \section{Elementos}
+        \paragraph{Implementaci\'on orientada a objetos}
+        Consiste en codificar en un lenguaje de programaci\'on orientada a
+        objetos los mecanismos definidos en el dise\~no.
+
+    %---------------------------------------- seccion 1
+
+    \section{Ejemplos de c\'odigo}
+
+%       \lstset{
+%         language         = C++,
+%         tabsize          = 3,
+%         basicstyle       = \small,
+%         %keywordstyle    = \color{blue}\bfseries,
+%         %stringstyle     = \color{red},
+%         %commentstyle    = \color{cyan},
+%         showstringspaces = false
+%       }
+
+      \lstset{
+        language         = C++,
+        breaklines       = true,
+        breakindent      = 30pt,                                    % chr
+        prebreak         = \mbox{\hspace{5pt}\tiny$\searrow$},      % chr
+        postbreak        = \mbox{\ColDarkBlue{\tiny$\rightarrow$}}, % chr
+        tabsize          = 3,
+        basicstyle       = \small,
+        keywordstyle     = \color{blue}\bfseries,
+        stringstyle      = \color{red},
+        commentstyle     = \color{gray},
+        showstringspaces = false
+      }
+
+      \paragraph{Atributo}
+        \texttt{
+          \lstinputlisting{atributo.cc}
+        }
+
+      \paragraph{Singleton}
+        \texttt{
+          \lstinputlisting{singleton.cc}
+        }
+
+      \paragraph{Dynamic cast}
+        \texttt{
+          \lstinputlisting{dynamic_cast.cc}
+        }
+
+      \paragraph{Interface}
+        \texttt{
+          \lstinputlisting{interface.cc}
+        }
+
+      \paragraph{Subclase}
+        \texttt{
+          \lstinputlisting{subclase.cc}
+        }
+
+      \paragraph{Iterador}
+        \texttt{
+          \lstinputlisting{iterador.cc}
+        }
+
+\end{document}

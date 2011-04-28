@@ -1,0 +1,94 @@
+\select@language {spanish}
+\contentsline {chapter}{\numberline {}An\'alisis}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Elementos}{1}{section.1.1}
+\contentsline {paragraph}{Orientaci\'on a objetos}{1}{section*.2}
+\contentsline {paragraph}{An\'alisis orientado a objetos}{1}{section*.3}
+\contentsline {subparagraph}{Objetivo-1}{1}{section*.4}
+\contentsline {subparagraph}{Objetivo-2}{1}{section*.5}
+\contentsline {paragraph}{Actividades en el an\'alisis}{1}{section*.6}
+\contentsline {section}{\numberline {1.2}Conceptos b\'asicos}{1}{section.1.2}
+\contentsline {paragraph}{Concepto}{1}{section*.7}
+\contentsline {paragraph}{Clase}{2}{section*.8}
+\contentsline {paragraph}{Objeto}{2}{section*.9}
+\contentsline {paragraph}{Identidad}{2}{section*.10}
+\contentsline {paragraph}{Atributo}{2}{section*.11}
+\contentsline {paragraph}{Operaci\'on}{2}{section*.12}
+\contentsline {paragraph}{M\'etodo}{2}{section*.13}
+\contentsline {paragraph}{Polimorfismo}{2}{section*.14}
+\contentsline {paragraph}{Interfaz}{2}{section*.15}
+\contentsline {paragraph}{Datatype}{2}{section*.16}
+\contentsline {paragraph}{Datavalue}{2}{section*.17}
+\contentsline {paragraph}{Referencia}{3}{section*.18}
+\contentsline {paragraph}{Tipo est\'atico y din\'amico}{3}{section*.19}
+\contentsline {paragraph}{Asociaci\'on}{3}{section*.20}
+\contentsline {paragraph}{Generalizaci\'on}{3}{section*.21}
+\contentsline {paragraph}{Realizaci\'on}{3}{section*.22}
+\contentsline {paragraph}{Tipo asociativo}{3}{section*.23}
+\contentsline {paragraph}{Roles}{3}{section*.24}
+\contentsline {subparagraph}{Cuando utilizar el rol}{3}{section*.25}
+\contentsline {paragraph}{Agregaci\'on}{3}{section*.26}
+\contentsline {paragraph}{Subsumption}{4}{section*.27}
+\contentsline {paragraph}{Acceso a propiedades}{4}{section*.28}
+\contentsline {paragraph}{Descriptores}{4}{section*.29}
+\contentsline {paragraph}{Herencia}{4}{section*.30}
+\contentsline {paragraph}{Clase abstracta}{4}{section*.31}
+\contentsline {paragraph}{Operaci\'on abstracta}{4}{section*.32}
+\contentsline {paragraph}{Modelo}{4}{section*.33}
+\contentsline {paragraph}{Relaci\'on entre caso de uso, escenario y DSS}{4}{section*.34}
+\contentsline {paragraph}{Relaci\'on entre caso de uso y colaboraci\'on}{5}{section*.35}
+\contentsline {section}{\numberline {1.3}Modelo de dominio}{5}{section.1.3}
+\contentsline {paragraph}{Modelos de las actividades}{5}{section*.36}
+\contentsline {paragraph}{Invariante}{5}{section*.37}
+\contentsline {section}{\numberline {1.4}OCL}{5}{section.1.4}
+\contentsline {paragraph}{Colecci\'on de objetos}{5}{section*.38}
+\contentsline {paragraph}{Subtipos}{5}{section*.39}
+\contentsline {paragraph}{Ejemplo 1}{6}{section*.40}
+\contentsline {paragraph}{Ejemplo 2}{6}{section*.41}
+\contentsline {paragraph}{Ejemplo 3}{6}{section*.42}
+\contentsline {paragraph}{Ejemplo 4}{6}{section*.43}
+\contentsline {paragraph}{Ejemplo 5}{6}{section*.44}
+\contentsline {section}{\numberline {1.5}Casos de uso}{6}{section.1.5}
+\contentsline {subsection}{\numberline {1.5.1}Descripci\'on}{6}{subsection.1.5.1}
+\contentsline {subsection}{\numberline {1.5.2}Diagrama de secuencia del sistema}{6}{subsection.1.5.2}
+\contentsline {subsubsection}{Elementos del DSS}{6}{section*.45}
+\contentsline {subsection}{\numberline {1.5.3}Contratos de software}{7}{subsection.1.5.3}
+\contentsline {paragraph}{Precondici\'on}{7}{section*.46}
+\contentsline {paragraph}{Postcondici\'on}{7}{section*.47}
+\contentsline {paragraph}{Memoria del sistema}{7}{section*.48}
+\contentsline {chapter}{\numberline {}Dise\~no}{8}{chapter.2}
+\contentsline {section}{\numberline {2.1}Elementos}{8}{section.2.1}
+\contentsline {paragraph}{Dise\~no orientado a objetos}{8}{section*.49}
+\contentsline {paragraph}{Arquitectura l\'ogica}{8}{section*.50}
+\contentsline {section}{\numberline {2.2}Modelo de dise\~no}{8}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Descripci\'on}{8}{subsection.2.2.1}
+\contentsline {paragraph}{Controladores}{8}{section*.51}
+\contentsline {paragraph}{Criterios GRASP}{8}{section*.52}
+\contentsline {paragraph}{Clases fuertes}{9}{section*.53}
+\contentsline {paragraph}{Clases d\'ebiles}{9}{section*.54}
+\contentsline {paragraph}{Manejador}{9}{section*.55}
+\contentsline {paragraph}{Interfaces del sistema}{9}{section*.56}
+\contentsline {paragraph}{F\'abrica}{9}{section*.57}
+\contentsline {paragraph}{C\'omo dise\~nar una colaboraci\'on}{9}{section*.58}
+\contentsline {paragraph}{Visibilidad}{10}{section*.59}
+\contentsline {section}{\numberline {2.3}Diagrama de comunicaci\'on}{10}{section.2.3}
+\contentsline {paragraph}{Descripci\'on}{10}{section*.60}
+\contentsline {section}{\numberline {2.4}Patrones de dise\~no}{10}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Descripci\'on}{10}{subsection.2.4.1}
+\contentsline {paragraph}{Strategy}{10}{section*.61}
+\contentsline {paragraph}{Composite}{10}{section*.62}
+\contentsline {paragraph}{Singleton}{10}{section*.63}
+\contentsline {paragraph}{State}{10}{section*.64}
+\contentsline {paragraph}{Proxy}{10}{section*.65}
+\contentsline {paragraph}{Template method}{10}{section*.66}
+\contentsline {paragraph}{Observer}{10}{section*.67}
+\contentsline {paragraph}{Adapter}{11}{section*.68}
+\contentsline {chapter}{\numberline {}Implementaci\'on}{12}{chapter.3}
+\contentsline {section}{\numberline {3.1}Elementos}{12}{section.3.1}
+\contentsline {paragraph}{Implementaci\'on orientada a objetos}{12}{section*.69}
+\contentsline {section}{\numberline {3.2}Ejemplos de c\'odigo}{12}{section.3.2}
+\contentsline {paragraph}{Atributo}{12}{section*.70}
+\contentsline {paragraph}{Singleton}{12}{section*.71}
+\contentsline {paragraph}{Dynamic cast}{13}{section*.72}
+\contentsline {paragraph}{Interface}{13}{section*.73}
+\contentsline {paragraph}{Subclase}{13}{section*.74}
+\contentsline {paragraph}{Iterador}{13}{section*.75}
